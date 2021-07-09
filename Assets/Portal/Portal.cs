@@ -18,6 +18,11 @@ public class Portal : MonoBehaviour
     [SerializeField]
     private Material _basePortalMat;
 
+    [SerializeField]
+    private Material _transparentPortalMat;
+
+    private Material _myPortalMat;
+
     private RenderTexture _renderTexture;
 
 	private void OnEnable()
@@ -27,8 +32,9 @@ public class Portal : MonoBehaviour
 
         _portalCam.targetTexture = _renderTexture;
 
-        _render.material = new Material(_basePortalMat);
-        _render.material.mainTexture = _renderTexture;
+        _myPortalMat = new Material(_basePortalMat);
+        _myPortalMat.mainTexture = _renderTexture;
+        _render.material = _myPortalMat;
 	}
 
 	private void OnDisable()
@@ -40,6 +46,8 @@ public class Portal : MonoBehaviour
         _renderTexture.Release();
 
         _renderTexture = null;
+
+        _myPortalMat = null;
 	}
 
 	// Update is called once per frame
@@ -50,6 +58,31 @@ public class Portal : MonoBehaviour
 
 	private void LateUpdate()
 	{
+        LinkedTo.GoTransparent();
+
+        var camTrans = Camera.main.transform;
+        var linkedTrans = LinkedTo.transform;
+        var myTrans = _portalCam.transform;
+
+        var portalDistanceFromCam = Vector3.Dot(camTrans.forward, transform.position - camTrans.position);
+        myTrans.position = linkedTrans.position - linkedTrans.forward * portalDistanceFromCam;
+
+        myTrans.forward = linkedTrans.TransformDirection(camTrans.forward);
+        myTrans.right = linkedTrans.TransformDirection(camTrans.right);
+        myTrans.up = linkedTrans.TransformDirection(camTrans.up);
+
         _portalCam.Render();
+
+        LinkedTo.GoNormal();
+	}
+
+    private void GoTransparent()
+	{
+        gameObject.layer = LayerMask.NameToLayer("PortalNoRender");
+    }
+
+    private void GoNormal()
+	{
+        gameObject.layer = LayerMask.NameToLayer("Default");
 	}
 }

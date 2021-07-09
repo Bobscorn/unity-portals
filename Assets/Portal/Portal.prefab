@@ -38,7 +38,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162883256661361049}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -62,7 +62,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -174,3 +174,4 @@ MonoBehaviour:
   _portalCam: {fileID: 1192420642374511552}
   _baseRT: {fileID: 11400000, guid: fb59f7c28cbf9ce488d94fbb8fa1d429, type: 2}
   _basePortalMat: {fileID: 2100000, guid: 2f00d96854777874088f59408ac6366e, type: 2}
+  _transparentPortalMat: {fileID: 2100000, guid: ac8bff8d556370146b1b29ef9bb20e53, type: 2}

@@ -718,6 +718,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 648361714}
     m_Modifications:
+    - target: {fileID: 162883256661361049, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 712918106426156725, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -765,6 +769,10 @@ PrefabInstance:
     - target: {fileID: 6239695555651819827, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_Name
       value: Portal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239695555651819827, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7802423187743845952, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: LinkedTo
@@ -924,13 +932,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 648361714}
     m_Modifications:
+    - target: {fileID: 162883256661361049, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 712918106426156725, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 712918106426156725, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.46
+      value: 8.57
       objectReference: {fileID: 0}
     - target: {fileID: 712918106426156725, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -938,7 +950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 712918106426156725, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 712918106426156725, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -971,6 +983,10 @@ PrefabInstance:
     - target: {fileID: 6239695555651819827, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239695555651819827, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7802423187743845952, guid: b58e6f461c04fce4c97ead3b8046a2e4, type: 3}
       propertyPath: LinkedTo
